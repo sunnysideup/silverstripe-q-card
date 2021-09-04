@@ -1,0 +1,33 @@
+{
+  "name": "sunnysideup/payment-q-card",
+  "type": "silverstripe-module",
+  "description": "add q-card payment to your silverstripe e-commerce application",
+  "keywords": [
+    "Silverstripe-CMS",
+    "CMS",
+    "Silverstripe",
+    "ecommerce",
+    "e-commerce",
+    "shop",
+    "cart",
+    "pay later",
+    "Q Card",
+    "qcard"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Nicolaas Francken",
+      "email": "modules@sunnysideup.co.nz",
+      "role": "lead developer"
+    }
+  ],
+  "require": {
+    "sunnysideup/ecommerce": "*",
+    "silverstripe/framework": "~3.6",
+    "silverstripe/cms": "~3.6"
+  },
+  "extra": {
+    "installer-name": "payment-q-card"
+  }
+}
