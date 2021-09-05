@@ -1,6 +1,6 @@
 <?php
 
-class PaymentQCardTest extends SapphireTest
+class QCardPaymentTest extends SapphireTest
 {
     protected $usesDatabase = false;
 

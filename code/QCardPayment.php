@@ -3,10 +3,6 @@
 class QCardPayment extends EcommercePayment
 {
 
-
-
-
-
     /**
      * Message shown before payment is made
      * @var String
@@ -27,12 +23,12 @@ class QCardPayment extends EcommercePayment
 
 
     /**
-     * Process the DirectCredit payment method
+     * Process the QCardPayment payment method
      */
     public function processPayment($data, $form)
     {
-        $this->Status = Config::inst()->get("DirectCreditPayment", "default_status");
-        $this->Message = Config::inst()->get("DirectCreditPayment", "after_payment_message");
+        $this->Status = Config::inst()->get("QCardPayment", "default_status");
+        $this->Message = Config::inst()->get("QCardPayment", "after_payment_message");
         $this->write();
         return EcommercePayment_Success::create();
     }
@@ -40,7 +36,7 @@ class QCardPayment extends EcommercePayment
     public function getPaymentFormFields($amount = 0, $order = null)
     {
         return new FieldList(
-            new LiteralField($this->ClassName.'_BeforeMessage', '<div id="'.$this->ClassName.'_BeforeMessage">' . Config::inst()->get("DirectCreditPayment", "before_payment_message") . '</div>'),
+            new LiteralField($this->ClassName.'_BeforeMessage', '<div id="'.$this->ClassName.'_BeforeMessage">' . Config::inst()->get("QCardPayment", "before_payment_message") . '</div>'),
             new HiddenField($this->ClassName, $this->ClassName, 0)
         );
     }
